@@ -1,0 +1,10 @@
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Alejandro Correa Rodríguez', 1053812708, 'Laureles');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Majo Correa', 123456, 'Cra 80 # 38b -63');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Lilibeth Rodriguez', 1234, 'Cra 71 # C5 - 42');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Diego Correa', 10261239, 'Puente Aranda');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Claudia Rodríguez', 30316988, 'Sultana');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Karen Correa', 1053823184, 'Velez');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Andres Carvajal', 98765, 'Santa Lucía');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Mauricio Cardona', 102030, 'Bostón');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('David Vergara', 1053813515, 'Restpo');
+INSERT INTO terceros (nombres, documento, direccion) VALUES('Ricardo Gonzales', 1053810184, 'La Enea');

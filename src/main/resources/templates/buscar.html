@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head th:replace="layout/layout :: head">
+<body>
+
+	<header th:replace="layout/layout :: header"></header>
+
+
+	<div class="container py-4">
+		<div class="card bg-light">
+			<div class="card-header" th:text="${titulo}"></div>
+			<div class="card-body">
+
+
+				<form th:object="${tercero}" th:action="@{/buscar}" method="post">
+
+					<div class="form-group">
+						<label for="documento" class="col-sm-2 col-form-label">Documento</label>
+						<input autofocus autocomplete="off" th:field="*{documento}"
+							id="documento"
+							placeholder="Escríbe el documento y presiona Enter" type="text"
+							class="form-control" />
+					</div>
+				</form>
+
+				<ul class="list-group" th:if="${tercero.documento}">
+					<li class="list-group-item" th:text="${tercero.nombres}"></li>
+					<li class="list-group-item" th:text="${tercero.documento}"></li>
+					<li class="list-group-item" th:text="${tercero.direccion}"></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>

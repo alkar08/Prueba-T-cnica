@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head th:replace="layout/layout :: head">
+
+</head>
+<body>
+
+	<header th:replace="layout/layout :: header"></header>
+
+	<div class="container py-4">
+
+		<div class="card bg-light">
+			<div class="card-header" th:text="${titulo}"></div>
+			<div class="card-body">
+
+				<h4>
+					<a class="btn btn-primary btn-xs btn-success" th:href="@{/form}">crear
+						tercero</a>
+						
+					<a class="btn btn-primary btn-xs btn-success" th:href="@{/buscar}">buscar
+						tercero</a>
+				</h4>
+
+				<table class="table table-striped table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th>Id</th>
+							<th>Nombres</th>
+							<th>Documento</th>
+							<th>Dirección</th>
+							<th>editar</th>
+							<th>eliminar</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="tercero: ${listaTerceros}">
+							<td><a class="btn btn-primary btn-xs" th:href="@{/ver/} + ${tercero.id}" th:text="${tercero.id}"></a></td>
+							<td th:text="${tercero.nombres}"></td>
+							<td th:text="${tercero.documento}"></td>
+							<td th:text="${tercero.direccion}"></td>
+							<td><a class="btn btn-primary btn-xs"
+								th:href="@{/form/} + ${tercero.id}" th:text="'editar'"></a></td>
+							<td><a class="btn btn-danger btn-xs"
+								th:href="@{/eliminar/} + ${tercero.id}" th:text="'eliminar'"
+								onclick="return confirm('Estás seguro de eliminar el tercero');"></a></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>
